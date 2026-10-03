@@ -5,12 +5,14 @@
 
 window.WEDDING_DATA = {
   couple: {
+    name1: "SWARNA VARSHINI",
+    name2: "RAMASAMY",
     groom: "RAMASAMY SM",
     groomShort: "Ram",
     bride: "SWARNA VARSHINI D",
     brideShort: "Swarna",
     initials: "S & R",
-    monogram: "R & S",
+    monogram: "S & R",
     tagline: "Two paths. One story. One forever.",
     openingDate: "13 · November · 2026",
     heroDate: "13 · 11 · 2026"
