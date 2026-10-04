@@ -137,12 +137,67 @@ window.WEDDING_DATA = {
   },
 
   friends: {
-    heading: "Your Arrival Is Expected By",
-    subheading: "With love, blessings & warm regards",
+    heading: "The Ones Who Know Us Best ♥",
+    subheading: "With Love & Best Wishes From",
+    cardImage: "./editable/assets/friends-list.png",
+    groups: [
+      {
+        id: "groom",
+        title: "GROOM",
+        icon: "gopuram",
+        color: "maroon",
+        names: [
+          "SANGITHA",
+          "SUBHA",
+          "PRIYANKA",
+          "LAAVANYA",
+          "VIGNESH BABU",
+          "VIGNESHWARA VIBHAVA"
+        ]
+      },
+      {
+        id: "mutual",
+        title: "MUTUAL",
+        icon: "knot",
+        color: "olive",
+        names: [
+          "KRISHNA",
+          "AJAY",
+          "HEMANTH",
+          "SANTHOSH",
+          "BALA",
+          "GAYATHIRI"
+        ]
+      },
+      {
+        id: "bride",
+        title: "BRIDE",
+        icon: "lotus",
+        color: "maroon",
+        names: [
+          "NITHYA",
+          "SHIVANI",
+          "BARATH",
+          "SRIINIDHII",
+          "GOUTAM",
+          "ARAVIND",
+          "DHANUSH"
+        ]
+      }
+    ],
     circle: [
-      { role: "College Buddies", desc: "Batch of 2017 & Campus Friends who witnessed the very first hello" },
-      { role: "Dear Friends Circle", desc: "Friends who shared the laughter, conversations & road trips" },
-      { role: "Loving Families & Relatives", desc: "The D & SM Families who bless this sacred beginning" }
+      {
+        role: "GROOM",
+        desc: "SANGITHA · SUBHA · PRIYANKA · LAAVANYA · VIGNESH BABU · VIGNESHWARA VIBHAVA"
+      },
+      {
+        role: "MUTUAL",
+        desc: "KRISHNA · AJAY · HEMANTH · SANTHOSH · BALA · GAYATHIRI"
+      },
+      {
+        role: "BRIDE",
+        desc: "NITHYA · SHIVANI · BARATH · SRIINIDHII · GOUTAM · ARAVIND · DHANUSH"
+      }
     ],
     note: "Your presence and blessings will make our special day complete!"
   },
