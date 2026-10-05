@@ -8,7 +8,7 @@ window.WEDDING_DATA = {
     name1: "SWARNA VARSHINI",
     name2: "RAMASAMY",
     groom: "RAMASAMY SM",
-    groomShort: "Ram",
+    groomShort: "Ramasamy",
     bride: "SWARNA VARSHINI D",
     brideShort: "Swarna",
     initials: "S & R",

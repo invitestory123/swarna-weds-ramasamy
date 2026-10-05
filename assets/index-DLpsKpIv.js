@@ -61,7 +61,7 @@ function xd(){
   var bName = __wd.couple?.name1 || __wd.couple?.bride || "SWARNA VARSHINI";
   var gName = __wd.couple?.name2 || __wd.couple?.groom || "RAMASAMY";
   var bShort = __wd.couple?.brideShort || "Swarna";
-  var gShort = __wd.couple?.groomShort || "Ram";
+  var gShort = __wd.couple?.groomShort || "Ramasamy";
   var heroArt = __wd.assets?.heroArt || "./editable/assets/swarna-ramasamy-hero.webp";
   var storyPhoto = __wd.assets?.storyPhoto || null;
   var storyParagraphs = __wd.story?.paragraphs || [
@@ -253,10 +253,10 @@ function xd(){
       (0,H.jsxs)(md,{className:"footer__copy",children:[
         (0,H.jsx)(pd,{}),
         (0,H.jsx)("p",{className:"script",children:"With love & gratitude"}),
-        (0,H.jsxs)("h2",{children:[
-          bShort + " ",
-          (0,H.jsx)("i",{children:"&"}),
-          " " + gShort
+        (0,H.jsxs)("h2",{className:"footer__names",children:[
+          (0,H.jsx)("span",{className:"footer__name footer__name--bride",children:bShort}),
+          (0,H.jsx)("i",{className:"footer__amp",children:"&"}),
+          (0,H.jsx)("span",{className:"footer__name footer__name--groom",children:gShort})
         ]}),
         (0,H.jsx)("p",{className:"footer__tagline",children:__wd.couple?.tagline ?? "Two paths. One story. One forever."}),
         (0,H.jsx)("p",{style:{fontSize:"14px",opacity:.85,marginTop:"6px"},children:"We cannot wait to celebrate with you."}),

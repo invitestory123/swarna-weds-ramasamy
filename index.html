@@ -332,17 +332,47 @@
         color: var(--gold) !important;
         margin: 0 0 6px !important;
       }
-      .footer--plain-theme .footer__copy h2 {
+      .footer--plain-theme .footer__copy h2,
+      .footer__names {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: 44px !important;
+        font-size: 38px !important;
         font-weight: 600 !important;
+        line-height: 1.05 !important;
         color: #fff9e7 !important;
         letter-spacing: 0.04em !important;
-        margin: 0 0 10px !important;
+        margin: 6px 0 12px !important;
+        gap: 2px !important;
       }
-      .footer--plain-theme .footer__copy h2 i {
+      .footer--plain-theme .footer__copy h2 span,
+      .footer__names span {
+        display: block !important;
+        line-height: 1 !important;
+      }
+      .footer--plain-theme .footer__copy h2 i,
+      .footer__names i {
         color: var(--gold) !important;
+        font-family: Italianno, cursive !important;
+        font-size: 34px !important;
         font-weight: 400 !important;
+        font-style: italic !important;
+        line-height: 0.8 !important;
+        margin: 3px 0 !important;
+        display: block !important;
+      }
+      @media (min-width: 768px) {
+        .footer--plain-theme .footer__copy h2,
+        .footer__names {
+          font-size: 44px !important;
+          gap: 4px !important;
+        }
+        .footer--plain-theme .footer__copy h2 i,
+        .footer__names i {
+          font-size: 40px !important;
+        }
       }
       .footer--plain-theme .footer__tagline {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
