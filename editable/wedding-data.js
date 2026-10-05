@@ -33,52 +33,43 @@ window.WEDDING_DATA = {
   story: {
     title: "A Little Piece of Our World",
     subtitle: "From a chance introduction in 2017 to a thousand shared dreams today",
-    intro: "It all began in 2017, with a simple introduction in the familiar corners of college — two strangers meeting without knowing that this little moment would one day become the beginning of everything.",
     paragraphs: [
-      "It all began in 2017, with a simple introduction in the familiar corners of college — two strangers meeting without knowing that this little moment would one day become the beginning of everything.",
-      "What started as a formal hello slowly grew into conversations, laughter, friendship, and countless little memories. Months turned into years, and strangers became friends.",
-      "And somewhere between all those ordinary moments, we found something extraordinary — a companion in each other.",
-      "Someone to laugh with, dream with, grow with, and come home to.",
-      "There was no grand beginning, no perfectly written plan. Just two people who slowly found their way into each other’s lives, until one day, it felt impossible to imagine life any other way.",
-      "From a chance introduction in 2017 to a thousand shared dreams today, our paths have gently intertwined into one beautiful journey.",
-      "Now, after all these years, we are ready to begin our favourite chapter yet — a lifetime together.",
-      "With hearts full of love, gratitude, and excitement for everything that lies ahead, we invite you to be part of the day when our story takes its most beautiful turn."
+      "It all began in 2017 with a simple introduction in the familiar corners of college — two strangers meeting without knowing that this little moment would one day become the beginning of everything. What started as a formal hello slowly grew into conversations, laughter, friendship, and countless little memories as strangers became companions.",
+      "Somewhere between all those ordinary moments, we found something extraordinary — someone to laugh with, dream with, grow with, and come home to. There was no grand beginning or perfectly written plan, just two people who slowly found their way into each other’s lives until it felt impossible to imagine life any other way.",
+      "From a chance introduction to a thousand shared dreams today, our paths have gently intertwined into one beautiful journey. Now, after all these years, we are ready to begin our favourite chapter yet — a lifetime together. With hearts full of love and gratitude, we invite you to be part of the day when our story takes its most beautiful turn."
     ],
     signature: "Ram & Swarna",
-    closingQuote: "Two paths. One story. One forever.",
-    portraitCaption: ["Two paths. One story.", "One forever."]
+    closingQuote: "Two paths. One story. One forever."
   },
 
   photos: [
     {
-      src: "./editable/assets/swarna_ram_1.webp",
-      alt: "Swarna & Ram celebrating moments with joy and smiles",
-      caption: "Countless Little Memories",
-      tag: "Pure Happiness"
-    },
-    {
-      src: "./editable/assets/swarna_ram_2.webp",
-      alt: "Swarna & Ram sharing a quiet, affectionate glance",
-      caption: "A Companion in Each Other",
-      tag: "Soulmates"
-    },
-    {
       src: "./editable/assets/swarna_ram_3.webp",
       alt: "Swarna & Ram in vibrant festive attire against floral backdrop",
       caption: "Surrounded by Love & Colors",
-      tag: "Celebration"
+      tag: "Celebration",
+      aspect: "tall"
+    },
+    {
+      src: "./editable/assets/swarna_ram_1.webp",
+      alt: "Swarna & Ram celebrating moments with joy and smiles",
+      caption: "Countless Little Memories",
+      tag: "Pure Happiness",
+      aspect: "wide"
     },
     {
       src: "./editable/assets/swarna_ram_4.webp",
       alt: "Swarna & Ram sweet couple selfie",
       caption: "Someone to Laugh With & Dream With",
-      tag: "Everyday Magic"
+      tag: "Everyday Magic",
+      aspect: "square"
     },
     {
       src: "./editable/assets/swarna_ram_5.webp",
       alt: "Swarna & Ram college memories in Cyan Saree & Traditional Attire",
       caption: "Where It All Began · College 2017",
-      tag: "The Beginning"
+      tag: "The Beginning",
+      aspect: "tall"
     }
   ],
 
@@ -91,6 +82,7 @@ window.WEDDING_DATA = {
       day: "Thursday",
       time: "6:30 PM onwards",
       place: "Vasantham Thirumana Maaliggai, Chromepet",
+      mapsUrl: "https://maps.app.goo.gl/6yETi9xzxAgyGJ6y7",
       description: "An enchanting evening of music, grand feast, warm congratulations, and celebration with family & friends.",
       mark: "reception",
       color: "#c98f3b"
@@ -103,6 +95,7 @@ window.WEDDING_DATA = {
       day: "Friday",
       time: "9:00 AM – 10:00 AM",
       place: "Vasantham Thirumana Maaliggai, Chromepet",
+      mapsUrl: "https://maps.app.goo.gl/6yETi9xzxAgyGJ6y7",
       description: "The sacred and auspicious hour when Swarna & Ramasamy tie the knot with the blessings of almighty and elders.",
       mark: "wedding",
       color: "#e2b144"
@@ -114,7 +107,8 @@ window.WEDDING_DATA = {
       date: "Nov 13, 2026",
       day: "Friday",
       time: "6:00 PM onwards",
-      place: "Vasantham Thirumana Maaliggai, Chromepet",
+      place: "Parvathi Mahal, Valasaravakkam",
+      mapsUrl: "https://maps.app.goo.gl/nv4gthgb2b6xbyW39",
       description: "Traditional joyous bridal welcoming ceremony, cultural rituals, joyful music, and celebratory dinner feast.",
       mark: "pen-alaipu",
       color: "#d47a4f"
@@ -133,7 +127,7 @@ window.WEDDING_DATA = {
   music: {
     title: "Kaathale Kaathale",
     movie: "96 Movie (Govind Vasantha)",
-    src: "./assets/kathale_kathale.webm"
+    src: "./assets/kathale_kathale.mp3"
   },
 
   friends: {
@@ -206,7 +200,6 @@ window.WEDDING_DATA = {
     video: "./editable/assets/sm.mp4",
     flowFrame: "./editable/assets/flow-first-frame.webp",
     heroArt: "./editable/assets/swarna-ramasamy-hero.webp",
-    storyPhoto: "./editable/assets/swarna-ramasamy-story.webp",
     ogImage: "./editable/assets/swarna-ramasamy-og.jpg"
   }
 };

@@ -21,8 +21,7 @@
 
     <!-- Preloads -->
     <link rel="preload" as="image" href="./editable/assets/swarna-ramasamy-hero.webp" type="image/webp" fetchpriority="high" />
-    <link rel="preload" as="video" href="./editable/assets/sm.mp4" type="video/mp4" />
-    <link rel="preload" as="audio" href="./assets/kathale_kathale.webm" type="audio/webm" />
+    <link rel="preload" as="audio" href="./assets/kathale_kathale.mp3" type="audio/mpeg" />
 
     <!-- Template Data, Script & Styles -->
     <script src="./editable/wedding-data.js"></script>
@@ -34,63 +33,183 @@
          SWARNA & RAMASAMY — LOTUS LEAF CUSTOM ENHANCEMENTS
          ========================================================================= */
 
-      /* Story Paragraphs Styling */
-      .story__body {
-        margin: 24px 0 28px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+      /* Hero Typography Hierarchy — Balanced & 4-5 font sizes apart */
+      .hero .eyebrow {
+        font-family: Manrope, sans-serif !important;
+        font-size: 13.5px !important;
+        letter-spacing: 0.22em !important;
+        text-transform: uppercase !important;
+        color: #f7e6b5 !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75) !important;
+        margin-bottom: 6px !important;
       }
-      .story__p {
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: 19px;
-        line-height: 1.75;
-        color: var(--ink);
-        margin: 0;
-        font-weight: 500;
-        letter-spacing: 0.01em;
+      .hero h1 {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 24px !important;
+        line-height: 1.25 !important;
+        letter-spacing: 0.08em !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8), 0 0 24px rgba(216, 154, 43, 0.45) !important;
+        margin: 10px 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px 10px !important;
+      }
+      .hero h1 span {
+        display: inline-block !important;
+        white-space: nowrap !important;
+      }
+      .hero h1 i {
+        font-family: Italianno, cursive !important;
+        font-size: 24px !important;
+        color: var(--gold) !important;
+        margin: 0 4px !important;
+        font-style: italic !important;
+        line-height: 1 !important;
+      }
+      .hero .date-rule {
+        font-size: 17.5px !important;
+        letter-spacing: 0.16em !important;
+        color: #ffd875 !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+        margin: 10px auto !important;
+      }
+      .hero__note {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        color: #fcf6e8 !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+      }
+      @media (min-width: 768px) {
+        .hero .eyebrow { font-size: 14.5px !important; }
+        .hero h1 { font-size: 28px !important; }
+        .hero h1 i { font-size: 28px !important; }
+        .hero .date-rule { font-size: 19px !important; }
+        .hero__note { font-size: 17px !important; }
       }
 
-      /* Picture Collage (Memories Section) */
+      /* Story Section — Refined & Centered (Photo removed for clarity, tighter gaps) */
+      .story--centered {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 80px 24px 70px !important;
+        text-align: center !important;
+      }
+      .story--centered .story__inner {
+        max-width: 660px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+      .story--centered .story__inner .lotus {
+        margin: 0 auto 12px !important;
+      }
+      .story--centered .story__inner h2 {
+        font-size: 38px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 8px !important;
+      }
+      .story__body {
+        margin: 18px auto 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        max-width: 620px !important;
+      }
+      .story__p {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 18.5px !important;
+        line-height: 1.64 !important;
+        color: #2b251b !important;
+        margin: 0 !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.01em !important;
+        text-align: center !important;
+      }
+      .story--centered .signature {
+        font-family: Italianno, cursive !important;
+        font-size: 34px !important;
+        color: var(--pink) !important;
+        margin-top: 14px !important;
+        text-align: center !important;
+      }
+
+      /* Picture Collage (Memories Section) — Authentic Photo Collage Layout */
       .gallery-section {
         background: linear-gradient(180deg, var(--ivory) 0%, #e7e2c4 50%, var(--ivory) 100%);
-        padding: 90px 22px;
+        padding: 85px 20px;
+        position: relative;
       }
       .gallery__header {
         text-align: center;
         max-width: 520px;
-        margin: 0 auto 40px;
+        margin: 0 auto 36px;
       }
-      .gallery__container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        max-width: 1040px;
-        margin: 0 auto;
+      .gallery__header .script {
+        color: #6d7840;
+        font-size: 26px;
+        margin-top: 4px;
       }
-      .gallery__card {
-        background: rgba(255, 255, 255, 0.6);
-        border: 1px solid rgba(216, 154, 43, 0.35);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(38, 50, 16, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      .collage-container {
         display: flex;
-        flex-direction: column;
-      }
-      .gallery__card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 16px 36px rgba(38, 50, 16, 0.14);
-        border-color: rgba(216, 154, 43, 0.65);
-      }
-      .gallery__img-box {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        max-width: 960px;
+        margin: 20px auto 0;
         position: relative;
+        padding: 10px;
+      }
+      .collage-card {
+        position: relative;
+        background: #ffffff;
+        padding: 12px 12px 18px;
+        border-radius: 4px;
+        box-shadow: 0 12px 28px rgba(38, 50, 16, 0.14), 0 3px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0.2s;
+        max-width: 320px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .collage-card:hover {
+        transform: scale(1.03) rotate(0deg) !important;
+        z-index: 10 !important;
+        box-shadow: 0 22px 48px rgba(38, 50, 16, 0.22);
+      }
+      .collage-card__tape {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 68px;
+        height: 18px;
+        background: rgba(228, 206, 162, 0.72);
+        backdrop-filter: blur(2px);
+        border-left: 2px dashed rgba(184, 140, 70, 0.45);
+        border-right: 2px dashed rgba(184, 140, 70, 0.45);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+        z-index: 3;
+      }
+      .collage-card__photo {
         width: 100%;
         aspect-ratio: 4 / 5;
         overflow: hidden;
+        border-radius: 2px;
         background: #18240f;
       }
-      .gallery__img-box img {
+      .collage-card--wide .collage-card__photo {
+        aspect-ratio: 16 / 11;
+      }
+      .collage-card--square .collage-card__photo {
+        aspect-ratio: 1 / 1;
+      }
+      .collage-card__photo img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -98,30 +217,130 @@
         display: block;
         transition: transform 0.6s ease;
       }
-      .gallery__card:hover .gallery__img-box img {
+      .collage-card:hover .collage-card__photo img {
         transform: scale(1.04);
       }
-      .gallery__overlay {
-        padding: 16px 18px 20px;
+      .collage-card__label {
+        padding: 12px 6px 0;
         text-align: center;
       }
-      .gallery__tag {
+      .collage-card__tag {
         display: inline-block;
         font-family: Manrope, sans-serif;
-        font-size: 10px;
+        font-size: 9.5px;
         text-transform: uppercase;
-        letter-spacing: 0.22em;
+        letter-spacing: 0.2em;
         color: var(--pink);
         font-weight: 700;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
       }
-      .gallery__caption {
+      .collage-card__caption {
         font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: 19px;
+        font-size: 17.5px;
+        font-style: italic;
         font-weight: 600;
-        color: var(--ink);
+        color: #2b251b;
         margin: 0;
-        line-height: 1.35;
+        line-height: 1.3;
+      }
+      /* Organic collage tilt angles */
+      .collage-card--1 { transform: rotate(-2deg); }
+      .collage-card--2 { transform: rotate(1.8deg) translateY(-8px); }
+      .collage-card--3 { transform: rotate(-1.5deg) translateY(6px); }
+      .collage-card--4 { transform: rotate(2deg); }
+      @media (max-width: 680px) {
+        .collage-container {
+          gap: 22px;
+        }
+        .collage-card {
+          max-width: 290px;
+        }
+        .collage-card--1 { transform: rotate(-1deg); }
+        .collage-card--2 { transform: rotate(1deg); }
+        .collage-card--3 { transform: rotate(-1deg); }
+        .collage-card--4 { transform: rotate(1deg); }
+      }
+
+      /* Event Detail Map Button */
+      .event__map-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+        padding: 6px 14px;
+        background: rgba(216, 154, 43, 0.16);
+        border: 1px solid rgba(216, 154, 43, 0.6);
+        border-radius: 20px;
+        color: #6a4c10;
+        font-family: Manrope, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .event__map-link:hover {
+        background: rgba(216, 154, 43, 0.3);
+        transform: translateY(-1px);
+      }
+
+      /* Last Slide (Footer) — Clean Plain Theme Based Background */
+      .footer--plain-theme {
+        background: radial-gradient(ellipse at 50% 30%, #1e2c13 0%, #141e0b 60%, #0c1207 100%) !important;
+        color: #fff8df !important;
+        text-align: center !important;
+        height: auto !important;
+        min-height: 440px !important;
+        padding: 85px 20px 40px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+      .footer--plain-theme .footer__copy {
+        position: relative !important;
+        inset: auto !important;
+        padding-bottom: 24px !important;
+        text-shadow: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .footer--plain-theme .footer__copy .lotus {
+        margin: 0 auto 10px !important;
+      }
+      .footer--plain-theme .footer__copy .script {
+        font-family: Italianno, cursive !important;
+        font-size: 38px !important;
+        color: var(--gold) !important;
+        margin: 0 0 6px !important;
+      }
+      .footer--plain-theme .footer__copy h2 {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 44px !important;
+        font-weight: 600 !important;
+        color: #fff9e7 !important;
+        letter-spacing: 0.04em !important;
+        margin: 0 0 10px !important;
+      }
+      .footer--plain-theme .footer__copy h2 i {
+        color: var(--gold) !important;
+        font-weight: 400 !important;
+      }
+      .footer--plain-theme .footer__tagline {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: 19px !important;
+        font-style: italic !important;
+        color: #eeddb0 !important;
+        margin: 0 !important;
+      }
+      .footer__rule {
+        width: 60px;
+        height: 1px;
+        background: var(--gold);
+        opacity: 0.6;
+        margin: 20px auto 14px;
       }
 
       /* Friends & Family Circle Section — Ornate Traditional Arch Theme */
@@ -431,8 +650,8 @@
     <!-- React Root Container -->
     <div id="root"></div>
 
-    <!-- Background Music Audio (96 Movie - Kaathale Kaathale) -->
     <audio id="bg-audio" loop preload="auto">
+      <source src="./assets/kathale_kathale.mp3" type="audio/mpeg" />
       <source src="./assets/kathale_kathale.webm" type="audio/webm" />
     </audio>
 

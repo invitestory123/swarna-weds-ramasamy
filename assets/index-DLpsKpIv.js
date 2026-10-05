@@ -63,16 +63,11 @@ function xd(){
   var bShort = __wd.couple?.brideShort || "Swarna";
   var gShort = __wd.couple?.groomShort || "Ram";
   var heroArt = __wd.assets?.heroArt || "./editable/assets/swarna-ramasamy-hero.webp";
-  var storyPhoto = __wd.assets?.storyPhoto || "./editable/assets/swarna-ramasamy-story.webp";
+  var storyPhoto = __wd.assets?.storyPhoto || null;
   var storyParagraphs = __wd.story?.paragraphs || [
-    "It all began in 2017, with a simple introduction in the familiar corners of college — two strangers meeting without knowing that this little moment would one day become the beginning of everything.",
-    "What started as a formal hello slowly grew into conversations, laughter, friendship, and countless little memories. Months turned into years, and strangers became friends.",
-    "And somewhere between all those ordinary moments, we found something extraordinary — a companion in each other.",
-    "Someone to laugh with, dream with, grow with, and come home to.",
-    "There was no grand beginning, no perfectly written plan. Just two people who slowly found their way into each other’s lives, until one day, it felt impossible to imagine life any other way.",
-    "From a chance introduction in 2017 to a thousand shared dreams today, our paths have gently intertwined into one beautiful journey.",
-    "Now, after all these years, we are ready to begin our favourite chapter yet — a lifetime together.",
-    "With hearts full of love, gratitude, and excitement for everything that lies ahead, we invite you to be part of the day when our story takes its most beautiful turn."
+    "It all began in 2017 with a simple introduction in the familiar corners of college — two strangers meeting without knowing that this little moment would one day become the beginning of everything. What started as a formal hello slowly grew into conversations, laughter, friendship, and countless little memories as strangers became companions.",
+    "Somewhere between all those ordinary moments, we found something extraordinary — someone to laugh with, dream with, grow with, and come home to. There was no grand beginning or perfectly written plan, just two people who slowly found their way into each other’s lives until it felt impossible to imagine life any other way.",
+    "From a chance introduction to a thousand shared dreams today, our paths have gently intertwined into one beautiful journey. Now, after all these years, we are ready to begin our favourite chapter yet — a lifetime together. With hearts full of love and gratitude, we invite you to be part of the day when our story takes its most beautiful turn."
   ];
 
   return (0,H.jsxs)("main",{children:[
@@ -116,18 +111,18 @@ function xd(){
     (0,H.jsx)(vd,{}),
 
     /* 4. OUR STORY SECTION */
-    (0,H.jsxs)("section",{className:"story section botanical",id:"story",children:[
+    (0,H.jsxs)("section",{className:"story section botanical" + (storyPhoto ? "" : " story--centered"),id:"story",children:[
       (0,H.jsx)("div",{className:"leaf leaf--left","aria-hidden":"true"}),
       (0,H.jsxs)(md,{className:"story__inner",children:[
         (0,H.jsx)(pd,{}),
         (0,H.jsx)("p",{className:"kicker",children:"Our Story"}),
-        (0,H.jsxs)("h2",{children:["A Little Piece,",(0,H.jsx)("br",{}),(0,H.jsx)("em",{children:"of Our World"})]}),
+        (0,H.jsxs)("h2",{children:["A Little Piece, ",(0,H.jsx)("em",{children:"of Our World"})]}),
         (0,H.jsx)("div",{className:"story__body",children:storyParagraphs.map((para,idx)=>(0,H.jsx)("p",{key:idx,className:"story__p",children:para}))}),
         (0,H.jsxs)("div",{className:"signature",children:[
           __wd.story?.signature || (gShort + " & " + bShort)
         ]})
       ]}),
-      (0,H.jsxs)(md,{className:"story__portrait",children:[
+      storyPhoto && (0,H.jsxs)(md,{className:"story__portrait",children:[
         (0,H.jsx)("img",{loading:"lazy",src:storyPhoto,alt:"Swarna Varshini & Ramasamy portrait"}),
         (0,H.jsxs)("span",{children:[
           __wd.story?.portraitCaption?.[0] ?? "Two paths. One story.",
@@ -146,12 +141,13 @@ function xd(){
         (0,H.jsx)("h2",{children:"Picture Collage"}),
         (0,H.jsx)("p",{className:"script",children:"Countless little memories along the way"})
       ]}),
-      (0,H.jsx)("div",{className:"gallery__container",children:__wd.photos.map((item,idx)=>(
-        (0,H.jsxs)(md,{className:"gallery__card gallery__card--" + (idx+1),key:idx,children:[
-          (0,H.jsx)("div",{className:"gallery__img-box",children:(0,H.jsx)("img",{loading:"lazy",src:item.src,alt:item.alt||bShort+" & "+gShort})}),
-          (0,H.jsxs)("div",{className:"gallery__overlay",children:[
-            item.tag && (0,H.jsx)("span",{className:"gallery__tag",children:item.tag}),
-            item.caption && (0,H.jsx)("p",{className:"gallery__caption",children:item.caption})
+      (0,H.jsx)("div",{className:"collage-container",children:__wd.photos.map((item,idx)=>(
+        (0,H.jsxs)(md,{className:"collage-card collage-card--" + (idx+1) + " collage-card--" + (item.aspect||"normal"),key:idx,children:[
+          (0,H.jsx)("div",{className:"collage-card__tape","aria-hidden":"true"}),
+          (0,H.jsx)("div",{className:"collage-card__photo",children:(0,H.jsx)("img",{loading:"lazy",src:item.src,alt:item.alt||bShort+" & "+gShort})}),
+          item.caption && (0,H.jsxs)("div",{className:"collage-card__label",children:[
+            item.tag && (0,H.jsx)("span",{className:"collage-card__tag",children:item.tag}),
+            (0,H.jsx)("p",{className:"collage-card__caption",children:item.caption})
           ]})
         ]})
       ))})
@@ -177,6 +173,14 @@ function xd(){
             (0,H.jsx)("span",{children:item.place}),
             n===idx && (0,H.jsxs)(dd.div,{className:"event__detail",initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},children:[
               item.description || "Join us as we celebrate with love and joy.",
+              item.mapsUrl && (0,H.jsxs)("a",{
+                className:"event__map-link",
+                href:item.mapsUrl,
+                target:"_blank",
+                rel:"noreferrer",
+                onClick:(e)=>e.stopPropagation(),
+                children:["📍 View Venue Map ",(0,H.jsx)("span",{children:"↗"})]
+              }),
               (0,H.jsx)("br",{}),
               "Tap again to close"
             ]})
@@ -245,19 +249,18 @@ function xd(){
     ]}),
 
     /* 9. END SLIDE (FOOTER) */
-    (0,H.jsxs)("footer",{className:"footer",children:[
-      (0,H.jsx)("img",{loading:"lazy",src:heroArt,alt:"Swarna Varshini & Ramasamy"}),
-      (0,H.jsx)("div",{className:"footer__shade"}),
+    (0,H.jsxs)("footer",{className:"footer footer--plain-theme",children:[
       (0,H.jsxs)(md,{className:"footer__copy",children:[
+        (0,H.jsx)(pd,{}),
         (0,H.jsx)("p",{className:"script",children:"With love & gratitude"}),
         (0,H.jsxs)("h2",{children:[
           bShort + " ",
           (0,H.jsx)("i",{children:"&"}),
           " " + gShort
         ]}),
-        (0,H.jsx)("p",{children:__wd.couple?.tagline ?? "Two paths. One story. One forever."}),
-        (0,H.jsx)("p",{style:{fontSize:"14px",opacity:.85,marginTop:"4px"},children:"We cannot wait to celebrate with you."}),
-        (0,H.jsx)(pd,{})
+        (0,H.jsx)("p",{className:"footer__tagline",children:__wd.couple?.tagline ?? "Two paths. One story. One forever."}),
+        (0,H.jsx)("p",{style:{fontSize:"14px",opacity:.85,marginTop:"6px"},children:"We cannot wait to celebrate with you."}),
+        (0,H.jsx)("div",{className:"footer__rule"})
       ]}),
       (0,H.jsx)("a",{
         href:"https://www.instagram.com/invitestory.in/",
