@@ -185,7 +185,7 @@ window.WEDDING_DATA = {
   assets: {
     video: "./editable/assets/sm.mp4",
     flowFrame: "./editable/assets/flow-first-frame.webp",
-    heroArt: "./editable/assets/swarna-ramasamy-hero.webp",
+    heroArt: "./editable/assets/swarna-ramasamy-beach-hero.webp",
     ogImage: "./editable/assets/swarna-ramasamy-og.jpg"
   }
 };
