@@ -44,32 +44,18 @@ window.WEDDING_DATA = {
 
   photos: [
     {
-      src: "./editable/assets/swarna_ram_3.webp",
-      alt: "Swarna & Ram in vibrant festive attire against floral backdrop",
-      caption: "Surrounded by Love & Colors",
-      tag: "Celebration",
-      aspect: "tall"
+      src: "./editable/assets/swarna_ram_collage_1.webp",
+      alt: "Swarna & Ram Collage - Moments We Cherish",
+      caption: "From College Days to Forever",
+      tag: "Our Journey",
+      aspect: "collage"
     },
     {
-      src: "./editable/assets/swarna_ram_1.webp",
-      alt: "Swarna & Ram celebrating moments with joy and smiles",
+      src: "./editable/assets/swarna_ram_collage_2.webp",
+      alt: "Swarna & Ram Collage - Campus Memories & Beyond",
       caption: "Countless Little Memories",
-      tag: "Pure Happiness",
-      aspect: "wide"
-    },
-    {
-      src: "./editable/assets/swarna_ram_4.webp",
-      alt: "Swarna & Ram sweet couple selfie",
-      caption: "Someone to Laugh With & Dream With",
-      tag: "Everyday Magic",
-      aspect: "square"
-    },
-    {
-      src: "./editable/assets/swarna_ram_5.webp",
-      alt: "Swarna & Ram college memories in Cyan Saree & Traditional Attire",
-      caption: "Where It All Began · College 2017",
-      tag: "The Beginning",
-      aspect: "tall"
+      tag: "Treasured Moments",
+      aspect: "collage"
     }
   ],
 
