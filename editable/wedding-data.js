@@ -42,22 +42,7 @@ window.WEDDING_DATA = {
     closingQuote: "Two paths. One story. One forever."
   },
 
-  photos: [
-    {
-      src: "./editable/assets/swarna_ram_collage_1.webp",
-      alt: "Swarna & Ram Collage - Moments We Cherish",
-      caption: "From College Days to Forever",
-      tag: "Our Journey",
-      aspect: "collage"
-    },
-    {
-      src: "./editable/assets/swarna_ram_collage_2.webp",
-      alt: "Swarna & Ram Collage - Campus Memories & Beyond",
-      caption: "Countless Little Memories",
-      tag: "Treasured Moments",
-      aspect: "collage"
-    }
-  ],
+  photos: [],
 
   events: [
     {
@@ -185,7 +170,7 @@ window.WEDDING_DATA = {
   assets: {
     video: "./editable/assets/sm.mp4",
     flowFrame: "./editable/assets/flow-first-frame.webp",
-    heroArt: "./editable/assets/swarna-ramasamy-beach-hero.webp",
+    heroArt: "./editable/assets/swarna-ramasamy-hero.webp",
     ogImage: "./editable/assets/swarna-ramasamy-og.jpg"
   }
 };
