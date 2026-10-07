@@ -53,29 +53,30 @@
       }
       .hero h1 {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-size: clamp(30px, 7.8vw, 42px) !important;
+        font-size: clamp(25px, 7.8vw, 42px) !important; /* min keeps the long bride name fully visible on 320px phones */
         line-height: 1.18 !important;
         letter-spacing: 0.06em !important;
         font-weight: 700 !important;
         color: #6d0f1f !important; /* deep maroon */
         text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 16px rgba(255, 255, 255, 0.75), 0 0 34px rgba(255, 255, 255, 0.5) !important;
-        margin: 12px 0 !important;
+        margin: 6px 0 !important;
         display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
+        flex-direction: column !important; /* bride → & → groom, stacked */
+        flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 6px 12px !important;
+        gap: 0 !important;
       }
       .hero h1 span {
-        display: inline-block !important;
+        display: block !important;
         white-space: nowrap !important;
+        line-height: 1.16 !important;
       }
       .hero h1 i {
         font-family: Italianno, cursive !important;
-        font-size: clamp(32px, 8.4vw, 46px) !important;
+        font-size: clamp(26px, 8.4vw, 46px) !important;
         color: #111111 !important; /* black */
-        margin: 0 4px !important;
+        margin: 4px 0 6px 1em !important; /* "&" sits indented on its own line between the names */
         font-style: italic !important;
         line-height: 1 !important;
         text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9) !important;
@@ -112,6 +113,24 @@
         .hero h1 i { font-size: 54px !important; }
         .hero .date-rule { font-size: 26px !important; }
         .hero__note { font-size: 22px !important; }
+      }
+
+      /* Three-line name stack (bride / & / groom) is taller than the old
+         single line — lift the hero copy on wide screens so the date rule and
+         tagline stay clear of the couple's heads in the artwork. */
+      @media (min-width: 700px) {
+        .hero__copy { top: 12% !important; }
+      }
+
+      /* Cover (opening) screen — bride & groom stacked, one name per line,
+         with the "&" indented on its own line between them. The fluid font
+         size keeps each name on a single line down to 320px viewports. */
+      .opening__copy h2 {
+        font-size: clamp(28px, 9.2vw, 52px) !important;
+      }
+      .opening__copy h2 i {
+        font-size: clamp(30px, 7.6vw, 42px) !important;
+        margin: 4px 0 6px 1em !important;
       }
 
       /* Story Section — Refined & Centered (Photo removed for clarity, tighter gaps) */
@@ -362,7 +381,7 @@
         font-weight: 400 !important;
         font-style: italic !important;
         line-height: 0.8 !important;
-        margin: 3px 0 !important;
+        margin: 3px 0 3px 1em !important; /* indents the "&" between the names */
         display: block !important;
       }
       @media (min-width: 768px) {
