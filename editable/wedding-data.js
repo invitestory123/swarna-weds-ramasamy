@@ -42,7 +42,22 @@ window.WEDDING_DATA = {
     closingQuote: "Two paths. One story. One forever."
   },
 
-  photos: [],
+  photos: [
+    {
+      src: "./editable/assets/swarna_ram_collage_1.webp",
+      alt: "Swarna & Ramasamy collage — moments we cherish",
+      caption: "From College Days to Forever",
+      tag: "Our Journey",
+      aspect: "collage"
+    },
+    {
+      src: "./editable/assets/swarna_ram_collage_2.webp",
+      alt: "Swarna & Ramasamy collage — campus memories & beyond",
+      caption: "Countless Little Memories",
+      tag: "Treasured Moments",
+      aspect: "collage"
+    }
+  ],
 
   events: [
     {
